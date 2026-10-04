@@ -46,12 +46,12 @@ def _normalise_product(item: dict[str, Any]) -> dict[str, Any]:
 
 
 @mcp.tool()
-def search_appliances(
+def search_mat(
     query: str,
     max_results: int = 10,
 ) -> dict[str, Any]:
     """
-    Search Amazon India for appliances using a natural-language query.
+    Search Amazon India for mats using a natural-language query.
 
     The calling LLM should provide the search query in normal language,
     for example:
@@ -114,13 +114,13 @@ def search_appliances(
 
 
 @mcp.tool()
-def get_appliance(
+def get_mat(
     asin: str,
 ) -> dict[str, Any]:
     """
     Retrieve the current Amazon India product page for a specific ASIN.
 
-    Useful when Brain already has an ASIN from search_appliances.
+    Useful when Brain already has an ASIN from search_mat.
     """
     asin = asin.strip()
 
